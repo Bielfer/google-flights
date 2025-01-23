@@ -13,9 +13,9 @@ const strings = {
 
 const PageHome = () => {
   return (
-    <main className="bg-slate-50 min-h-screen">
-      <div className="px-4 md:px-6 lg:px-8 mx-auto max-w-4xl py-16">
-        <h1 className="text-4xl font-semibold text-center mb-10">
+    <main className="min-h-screen bg-slate-50">
+      <div className="mx-auto max-w-4xl px-4 py-16 md:px-6 lg:px-8">
+        <h1 className="mb-10 text-center text-4xl font-semibold">
           {strings.title}
         </h1>
 

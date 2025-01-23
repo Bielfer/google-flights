@@ -265,15 +265,15 @@ export const FormSearchFlights = ({ className }: Props) => {
   return (
     <Form {...form}>
       <form
-        className={cn('p-6 shadow bg-white rounded-md', className)}
+        className={cn('rounded-md bg-white p-6 shadow', className)}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="flex gap-3 flex-wrap">
+        <div className="flex flex-wrap gap-3">
           <FormField
             name="type"
             control={control}
             render={({ field }) => (
-              <FormItem className="space-y-0 w-28">
+              <FormItem className="w-28 space-y-0">
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -404,7 +404,7 @@ export const FormSearchFlights = ({ className }: Props) => {
             name="cabinClass"
             control={control}
             render={({ field }) => (
-              <FormItem className="space-y-0 w-40">
+              <FormItem className="w-40 space-y-0">
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
@@ -430,7 +430,7 @@ export const FormSearchFlights = ({ className }: Props) => {
           />
         </div>
 
-        <div className="pt-6 grid sm:grid-cols-2 gap-y-6 md:grid-cols-4 gap-x-4">
+        <div className="grid gap-x-4 gap-y-6 pt-6 sm:grid-cols-2 md:grid-cols-4">
           <FormField
             name="origin"
             control={control}

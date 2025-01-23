@@ -37,7 +37,7 @@ export const ComboboxAirports = ({ className, formValue, onChange }: Props) => {
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="p-0 w-52" align="start">
+      <PopoverContent className="w-52 p-0" align="start">
         <Command>
           <CommandInput
             value={value}
