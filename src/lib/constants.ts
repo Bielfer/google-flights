@@ -23,4 +23,4 @@ export const flightCabinClassesValues = Object.values(
   flightCabinClasses
 ) as unknown as readonly [FlightCabinClass, ...FlightCabinClass[]];
 
-export const apiBaseUrl = 'https://sky-scrapper.p.rapidapi.com/api/v2/flights';
+export const apiBaseUrl = 'https://sky-scrapper.p.rapidapi.com/api';

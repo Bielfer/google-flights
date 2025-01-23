@@ -1,12 +1,13 @@
 import queryString from 'query-string';
 import { apiBaseUrl } from '~/lib/constants';
-import { SearchFlight, SearchParams } from '~/lib/types';
+import { type SearchParams } from '~/lib/types';
+import { type SearchFlights } from '~/lib/types/flights';
 
 const key = process.env.RAPID_API_KEY!;
 
 export const searchFlights = async (queryParams: SearchParams) => {
   const url = queryString.stringifyUrl({
-    url: `${apiBaseUrl}/searchFlightsWebComplete`,
+    url: `${apiBaseUrl}/v2/flights/searchFlightsWebComplete`,
     query: { ...queryParams, limit: 20 },
   });
 
@@ -18,7 +19,7 @@ export const searchFlights = async (queryParams: SearchParams) => {
     },
   });
 
-  const data = (await res.json()) as SearchFlight;
+  const data = (await res.json()) as SearchFlights;
 
   let flights = Array.isArray(data.data.itineraries)
     ? data.data.itineraries
