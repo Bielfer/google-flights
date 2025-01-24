@@ -21,6 +21,6 @@ export const getAirportsAction = async (query: string) => {
   });
 
   const data = (await res.json()) as SearchAirports;
-  console.log(data);
+
   return data.data;
 };
